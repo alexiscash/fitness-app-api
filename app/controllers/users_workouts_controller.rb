@@ -1,0 +1,2 @@
+class UsersWorkoutsController < ApplicationController
+end
