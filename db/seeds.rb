@@ -23,7 +23,11 @@ data.each do |key, value|
     thang = Workout.create(name: key)
     UsersWorkout.create(user_id: user.id, workout_id: thang.id)
     value.each do |exercise|
-        puts exercise
+        exercise.each do |akey, avalue|
+            # puts akey 
+            # puts avalue
+            Exercise.create(name: akey, description: avalue, workout_id: thang.id, video_url: "https://www.youtube.com/embed/Dy28eq2PjcM")
+        end
         # Exercise.create(name: exercise, workout_id: thang.id)
     end
 end
